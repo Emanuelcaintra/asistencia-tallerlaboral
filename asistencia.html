@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Asistencia - Evento Mayo</title>
+  <script>
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = (today.getMonth() + 1).toString().padStart(2, '0'); // meses van de 0-11
+    const dd = today.getDate().toString().padStart(2, '0');
+    const fecha = `${yyyy}-${mm}-${dd}`;
+
+    let url = "https://forms.office.com/r/7V4wtnfaEN"; // por si escanean fuera de fecha
+
+    switch (fecha) {
+      case "2025-05-09":
+        url = "https://forms.office.com/r/7V4wtnfaEN"; // Módulo 1
+        break;
+      case "2025-05-16":
+        url = "https://forms.office.com/Pages/ResponsePage.aspx?id=EACWIFYybUCqHWEI1w4dA1BjwmxpsyxPpJYGfirsCJ5UQUZLN01ONEhKUEhWV09TTzBGNjZEQVBTMS4u"; // Módulo 2
+        break;
+      case "2025-05-23":
+        url = "https://forms.office.com/Pages/ResponsePage.aspx?id=EACWIFYybUCqHWEI1w4dA1BjwmxpsyxPpJYGfirsCJ5UMVNBVlNTNEQ5QTJEMVpJM1dFOEg3NjNNMC4u"; // Módulo 3
+        break;
+      case "2025-05-30":
+        url = "https://forms.office.com/Pages/ResponsePage.aspx?id=EACWIFYybUCqHWEI1w4dA1BjwmxpsyxPpJYGfirsCJ5UMEJVV1NKRTFOTk4zVUlSVFYwTzAyWk9QRy4u"; // Módulo 4
+        break;
+    }
+
+    window.location.href = url;
+  </script>
+</head>
+<body>
+  <p>Redirigiendo a tu formulario de asistencia... Si no ocurre automáticamente, <a href="#" onclick="window.location.href=url">haz clic aquí</a>.</p>
+</body>
+</html>
